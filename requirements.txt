@@ -3,4 +3,5 @@ google-generativeai
 pandas
 Pillow
 PyMuPDF
+load_dotenv
 
