@@ -53,7 +53,7 @@ def get_gemini_response(input_text, image):
     ฟังก์ชันสำหรับส่งคำสั่งและรูปภาพไปยัง Gemini Pro Vision
     และรับผลลัพธ์กลับมา
     """
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     if image:
         response = model.generate_content([input_text, image])
         return response.text
@@ -240,4 +240,5 @@ if st.session_state.processed_data:
             data=excel_data,
             file_name="receipt_data.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
         )
